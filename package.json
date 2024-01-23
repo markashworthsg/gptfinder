@@ -41,7 +41,7 @@
     "react-hook-form": "^7.44.2",
     "seobot": "^1.0.7",
     "tailwind-merge": "^1.12.0",
-    "utf-8-validate": "^6.0.2",
+    "utf-8-validate": "^6.0.3",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {
