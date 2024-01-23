@@ -27,7 +27,7 @@ export default () => {
   const usedTools = [
     { title: 'FloatUI', url: 'https://www.floatui.com/' },
     { title: 'Sensorpro', url: 'https://sensorpro.eu/' },
-    { title: 'Usermaven', url: 'https://usermaven.com/' },
+//     { title: 'Usermaven', url: 'https://usermaven.com/' },
     { title: 'Vercel', url: 'https://vercel.com/' },
     { title: 'Supabase', url: 'https://supabase.com/' },
     { title: 'UnicornPlatform', url: 'https://unicornplatform.com/' },
@@ -38,8 +38,7 @@ export default () => {
     { title: '@sidi_jeddou_dev', url: 'https://twitter.com/sidi_jeddou_dev' },
     { title: '@vitalik_may', url: 'https://twitter.com/vitalik_may' },
     { title: '@BotanMan', url: 'https://twitter.com/BotanMan' },
-    { title: '@chris_byrne', url: 'https://twitter.com/chris_byrne' },
-    { title: 'see all', url: '/the-story' },
+    { title: '@chris_byrne', url: 'https://twitter.com/chris_byrne' }
   ];
 
   return (
@@ -48,7 +47,7 @@ export default () => {
         <div className="max-w-lg sm:mx-auto sm:text-center">
           <Brand className="sm:m-auto" />
           <p className="leading-relaxed mt-3 text-slate-300 text-[15px]">
-            A launchpad for dev tools, built by developers. Open-source and fair.
+            A launchpad for GPTs and AI tools.
           </p>
         </div>
         <ul className="text-sm font-medium items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
@@ -62,10 +61,7 @@ export default () => {
         </ul>
         <div className="mt-8 items-center justify-between sm:flex">
           <div className="mt-4 sm:mt-0">
-            &copy; 2023 Dev Hunt. Member of{' '}
-            <a className=" text-slate-100 hover:text-slate-50" href="https://www.marsx.dev/">
-              MarsX.Dev
-            </a>{' '}
+            &copy; 2024 GPT Finder.
             family. <br />
             <div className="text-xs pt-2">
               Uses{' '}
@@ -87,16 +83,8 @@ export default () => {
               ))}
               {'.'}
             </div>
-            <div className="text-xs pt-2">
-              <a href="https://devhunt.openstatus.dev/">Status page</a>
-            </div>
-            <a href="https://usermaven.com/?utm_source=badge" className="mt-5 block" rel="nofollow">
-              <img
-                className="w-32"
-                src="https://usermaven.com/img/badge-dark.png"
-                alt="Usermaven | Website analytics and product insights"
-              />
-            </a>
+
+
           </div>
           <div className="mt-6 sm:mt-0">
             <ul className="flex items-center space-x-4">

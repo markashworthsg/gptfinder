@@ -4,7 +4,7 @@ import { useSupabase } from '@/components/supabase/provider';
 import { useCallback, useEffect, useState } from 'react';
 import AvatarMenu from '../AvatarMenu';
 import axios from 'axios';
-import { usermaven } from '@/utils/usermaven';
+// import { usermaven } from '@/utils/usermaven';
 import Button from '@/components/ui/Button';
 import Modal from '@/components/ui/Modal';
 import Brand from '@/components/ui/Brand';
@@ -57,12 +57,12 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
             if (DISCORD_USER_WEBHOOK) await axios.post(DISCORD_USER_WEBHOOK, { content });
             
             await axios.post('/api/login', { firstName: user?.full_name as string, personalEMail: session.user.email as string });
-            await usermaven.id({
-              id: user?.id,
-              email: session?.user?.email,
-              created_at: Date.now().toLocaleString(),
-              first_name: user?.full_name,
-            });
+//             await usermaven.id({
+//               id: user?.id,
+//               email: session?.user?.email,
+//               created_at: Date.now().toLocaleString(),
+//               first_name: user?.full_name,
+//             });
             await profile.update(user?.id as string, {
               updated_at: new Date().toISOString(),
             });

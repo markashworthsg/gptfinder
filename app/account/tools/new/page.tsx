@@ -24,7 +24,7 @@ import { useRouter } from 'next/navigation';
 import SelectLaunchDate from '@/components/ui/SelectLaunchDate';
 import axios from 'axios';
 import ProfileService from '@/utils/supabase/services/profile';
-import { usermaven } from '@/utils/usermaven';
+// import { usermaven } from '@/utils/usermaven';
 import Alert from '@/components/ui/Alert';
 
 interface Inputs {

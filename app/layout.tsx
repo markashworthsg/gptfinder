@@ -69,40 +69,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en" className="bg-slate-900">
       <head>
-        {process.env.USER_MAVEN_KEY && (
-          <>
-            <Script
-              strategy="afterInteractive"
-              src="https://t.usermaven.com/lib.js"
-              data-key={process.env.USER_MAVEN_KEY}
-              data-tracking-host="https://events.usermaven.com"
-              data-autocapture="true"
-              data-privacy-policy="strict"
-              defer
-            ></Script>
-            <Script
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-            window.usermaven = window.usermaven || (function()
-            {(window.usermavenQ = window.usermavenQ || []).push(arguments)})
-          `,
-              }}
-            />
-            <Script
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ic87ytbm3p");
-`,
-              }}
-            />
-          </>
-        )}
         <meta httpEquiv="Content-Language" content="en" />
         <meta property="og:locale" content="en_US" />
         <meta name="language" content="English" />
