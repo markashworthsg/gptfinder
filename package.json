@@ -24,6 +24,7 @@
     "@types/prismjs": "^1.26.0",
     "@usermaven/sdk-js": "^1.2.2",
     "axios": "^1.4.0",
+    "bufferutil": "^4.0.8",
     "dompurify": "^3.0.3",
     "framer-motion": "^10.12.16",
     "highlight.js": "^11.9.0",
