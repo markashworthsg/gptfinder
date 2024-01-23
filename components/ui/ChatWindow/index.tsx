@@ -40,12 +40,12 @@ export default () => {
                   <p className="text-xs text-slate-300">Online, replies near instant</p>
                 </div>
                 <LinkItem
-                  href="https://twitter.com/messages/compose?recipient_id=1456321269029380097"
+                  href="https://twitter.com/compose/tweet?handle=gptfinder"
                   target="_blank"
                   className="mt-2 w-full flex items-center justify-center gap-x-2 bg-orange-500 hover:bg-orange-600 text-xs py-2"
                 >
                   <IconChatBubbleOvalLeftEllipsis className="w-4 h-4" />
-                  Contact johnrush
+                  Contact gptfinder
                 </LinkItem>
               </div>
             </div>
