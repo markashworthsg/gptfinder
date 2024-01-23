@@ -8,7 +8,8 @@ import { usermaven } from '@/utils/usermaven';
 import Button from '@/components/ui/Button';
 import Modal from '@/components/ui/Modal';
 import Brand from '@/components/ui/Brand';
-import { GithubProvider, GoogleProvider } from '../AuthProviderButtons';
+// import { GithubProvider, GoogleProvider } from '../AuthProviderButtons';
+import { GoogleProvider } from '../AuthProviderButtons';
 import ProfileService from '@/utils/supabase/services/profile';
 import { createBrowserClient } from '@/utils/supabase/browser';
 import { useRouter } from 'next/navigation';
@@ -18,7 +19,7 @@ import sendWelcomeEmail from '@/utils/sendWelcomeEmail';
 export default function Auth({ onLogout }: { onLogout?: () => void }) {
   const { supabase, session, user } = useSupabase();
   const [isGoogleAuthLoad, setGoogleAuthLoad] = useState<boolean>(false);
-  const [isGithubAuthLoad, setGithubAuthLoad] = useState<boolean>(false);
+//   const [isGithubAuthLoad, setGithubAuthLoad] = useState<boolean>(false);
   const [isModalActive, setModalActive] = useState<boolean>(false);
 
   const router = useRouter();
@@ -35,16 +36,16 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
     setModalActive(false);
   };
 
-  const handleGitHubLogin = async () => {
-    setGithubAuthLoad(true);
-    const { error } = await supabase.auth.signInWithOAuth({ provider: 'github' });
-
-    if (error != null) {
-      console.log({ error });
-    }
-    setGithubAuthLoad(false);
-    setModalActive(false);
-  };
+//   const handleGitHubLogin = async () => {
+//     setGithubAuthLoad(true);
+//     const { error } = await supabase.auth.signInWithOAuth({ provider: 'github' });
+//
+//     if (error != null) {
+//       console.log({ error });
+//     }
+//     setGithubAuthLoad(false);
+//     setModalActive(false);
+//   };
 
   const HandleSignInNotification = useCallback(() => {
     const eventListener = supabase.auth.onAuthStateChange((event, session) => {
@@ -98,7 +99,7 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
             <h1 className="text-slate-50 text-lg font-semibold">Log in to your account</h1>
             <p className="text-slate-300">Let's explore together, the legit way!</p>
           </div>
-          <GithubProvider isLoad={isGithubAuthLoad} onClick={handleGitHubLogin} className="w-full justify-center mt-4" />
+
           <GoogleProvider isLoad={isGoogleAuthLoad} onClick={handleGoogleLogin} className="w-full justify-center mt-2" />
         </div>
       </Modal>
