@@ -3,7 +3,8 @@
 import { useSupabase } from '@/components/supabase/provider';
 import Brand from '@/components/ui/Brand';
 import { useState } from 'react';
-import { GithubProvider, GoogleProvider } from '../AuthProviderButtons';
+// import { GithubProvider, GoogleProvider } from '../AuthProviderButtons';
+import { GoogleProvider } from '../AuthProviderButtons';
 
 const getURL = () => {
   let url =
@@ -20,7 +21,7 @@ const getURL = () => {
 export default () => {
   const { supabase } = useSupabase();
   const [isGoogleAuthLoad, setGoogleAuthLoad] = useState<boolean>(false);
-  const [isGithubAuthLoad, setGithubAuthLoad] = useState<boolean>(false);
+//   const [isGithubAuthLoad, setGithubAuthLoad] = useState<boolean>(false);
 
   const handleGoogleLogin = async () => {
     setGoogleAuthLoad(true);
@@ -32,15 +33,15 @@ export default () => {
     });
   };
 
-  const handleGithubLogin = async () => {
-    setGithubAuthLoad(true);
-    await supabase.auth.signInWithOAuth({
-      provider: 'github',
-      options: {
-        redirectTo: getURL(),
-      },
-    });
-  };
+//   const handleGithubLogin = async () => {
+//     setGithubAuthLoad(true);
+//     await supabase.auth.signInWithOAuth({
+//       provider: 'github',
+//       options: {
+//         redirectTo: getURL(),
+//       },
+//     });
+//   };
 
   return (
     <section>
@@ -53,7 +54,6 @@ export default () => {
               We use GitHub, and Google provider to keep it simple and easy for our users to login. Let's explore together, the legit way!
             </p>
           </div>
-          <GithubProvider isLoad={isGithubAuthLoad} onClick={handleGithubLogin} />
           <GoogleProvider isLoad={isGoogleAuthLoad} onClick={handleGoogleLogin} />
         </div>
       </div>

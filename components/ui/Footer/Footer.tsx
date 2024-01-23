@@ -17,7 +17,7 @@ export default () => {
       name: 'Blog',
     },
     {
-      href: 'https://twitter.com/johnrushx',
+      href: 'https://twitter.com/gptfinder',
       name: 'Contact',
     },
     { name: 'OSS Friends', href: '/oss-friends' },

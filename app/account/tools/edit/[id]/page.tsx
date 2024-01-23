@@ -308,14 +308,14 @@ export default () => {
           </FormLaunchSection>
           <FormLaunchSection
             number={4}
-            title="Launch Week for Your Dev Tool"
-            description="Setting the perfect launch week is essential to make a splash in the dev world."
+            title="Launch Week for Your Custom GPT or AI Tool"
+            description="Setting the perfect launch helps to get the most number of installs."
           >
             <div>
               <ul className="text-sm text-slate-300">
                 <li className="p-2 rounded-lg border border-slate-800 bg-slate-800/50">
                   The launch date is <b>{moment(getValues('launch_date')).format('LL')}</b> Please{' '}
-                  <a href="https://twitter.com/johnrushx" target="_blank" className="text-orange-500 hover:text-orange-400">
+                  <a href="https://twitter.com/gptfinder" target="_blank" className="text-orange-500 hover:text-orange-400">
                     contact us
                   </a>{' '}
                   if you want to update or cancel the launch.
