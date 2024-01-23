@@ -54,7 +54,7 @@ export default () => {
   const navigation = [
     { title: 'The Story', path: '/the-story' },
     {
-      title: 'Submit your Dev Tool',
+      title: 'Submit your Custom GPT',
       path: isLoggedin ? '/account/tools' : '/login',
       className: 'bg-orange-500 hover:bg-orange-600 text-white text-center rounded-lg px-3 p-2 duration-150 btnshake',
     },

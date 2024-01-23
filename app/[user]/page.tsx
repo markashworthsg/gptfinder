@@ -35,7 +35,7 @@ export async function generateMetadata({ params: { user } }: { params: { user: s
   const profile = await profileService.getByUsername(username);
 
   return {
-    title: `${profile?.full_name}'s profile on Dev Hunt - Dev Hunt`,
+    title: `${profile?.full_name}'s profile on  GPT Finder - GPT Finder`,
     description: `Discover the tools that ${profile?.full_name}, is passionate about on Dev Hunt`,
     metadataBase: new URL('https://devhunt.org'),
     alternates: {
@@ -43,14 +43,14 @@ export async function generateMetadata({ params: { user } }: { params: { user: s
     },
     openGraph: {
       type: 'article',
-      title: `${profile?.full_name}'s profile on Dev Hunt - Dev Hunt`,
-      description: `Discover the tools that ${profile?.full_name}, is passionate about on Dev Hunt`,
+      title: `${profile?.full_name}'s profile on GPT Finder - GPT Finder`,
+      description: `Discover the tools that ${profile?.full_name}, is passionate about on GPT Finder`,
       images: [(profile?.avatar_url as string) || ''],
       url: `https://devhunt.org/${decodeURIComponent(user)}`,
     },
     twitter: {
-      title: `${profile?.full_name}'s profile on Dev Hunt - Dev Hunt`,
-      description: `Discover the tools that ${profile?.full_name}, is passionate about on Dev Hunt`,
+      title: `${profile?.full_name}'s profile on  GPT Finder -  GPT Finder`,
+      description: `Discover the tools that ${profile?.full_name}, is passionate about on GPT Finder`,
       card: 'summary_large_image',
       images: [profile?.avatar_url ?? ''],
     },
